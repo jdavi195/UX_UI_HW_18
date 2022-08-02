@@ -52,32 +52,9 @@
     padding: 8px 25px;  
 }
 
-.heroimg {
-    height: 600px;
-    padding: 25px;
-}
-
 *{
-    background-color:black;
+    background-color:rgb(160, 160, 160);
 }
-
-.heroimg {
-    background-image: linear-gradient (rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/myphoto.png");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.p {
-    text-align: right;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
 
 .logo {
     margin-left: 8px;
@@ -87,72 +64,22 @@
     align-items:flex-start;
 }
 
-.container {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    color: #ffffff;
-}
-  
-.title {
-    font-size: x-large;
-    position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 8px;
-    padding-top: 8px;
-    background-color: transparent;
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
   }
   
-.name {
-    font-size: 32px;
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-}
-  
-.bio {
-    font-style: inherit;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
     text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-}
-  
-.click {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: xx-large;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: transparent;
-}
-  
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.content {
-    color: #ffffff;
-    justify-content: space-around;
-    height: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+/* save for button reformating
 
 .click {
     padding: 8px;
@@ -179,13 +106,13 @@
     transform: scale(95%);
     transition: .3s;
     transform: translate(-50%, -50%);
-}
+}*/
 
 .footer {
     padding: 40px 0;
-    background-color:black;
+    background-color: none;
     justify-content: space-around;
-
+    padding-top: 10px;
 }
 
 .footer_links {
@@ -197,11 +124,7 @@
     list-style: none;
 }
 
-.myimage{
-    margin: 0;
-    height: 100%;
-}
-
+/* still working on the footer layout. May use a grid...*/
 .footer .social {
     text-align: center;
     padding-bottom: 25px;
