@@ -6,37 +6,56 @@
     font-weight: 400;
 }
 
+.header a {
+    background-color: transparent;
+    padding: 15px;
+    justify-content: left;
+}
+
 .mySkills {
-    
+
 }
 
 .flex-container {
   display: flex;
+  height: 800px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
 
 }
 
 .flex-item {
-    width: 200px;
+    flex: 50%;
+    width: 400px;
     margin: 10px;
-    border: 3px solid rgb(255, 0, 0);
-    background-color: #dfdfdf;
+    background-color: black;
 }
 
 .flexbox-item-1 {
     min-height: 100px;
+    min-width: 200px;
 }
 
 .flexbox-item-2 {
-    min-height: 200px;
+    min-height: 100px;
+    min-width: 200px;
 }
 
 .flexbox-item-3 {
-    min-height: 300px;
+    min-height: 100px;
+    min-width: 200px;
 }
 
 .container {
     width: 100%;
     margin: 0 auto;
+}
+
+.inline-block li a {
+    display:block;
+
 }
 
 .nav_links li {
@@ -45,6 +64,7 @@
         padding: 10px 10px;
         font-family: Arial, Helvetica, sans-serif;
         vertical-align: top;
+        justify-content: right;
 }
 
 .nav_links li a:hover {
@@ -61,7 +81,7 @@
 }
 
 .nav_links ul {
-    list-style: none;
+    list-style-type: none;
     background: transparent;
     padding: 8px;
     margin: 0;
@@ -107,8 +127,6 @@
     font-size: 30px;
   }
 
-/* save for button reformating
-
 .click {
     padding: 8px;
     border: none;
@@ -134,7 +152,7 @@
     transform: scale(95%);
     transition: .3s;
     transform: translate(-50%, -50%);
-}*/
+}
 
 .footer {
     padding: 40px 0;
@@ -149,7 +167,7 @@
     padding-bottom: 4px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    list-style: none;
+    list-style-type: none;
 }
 
 /* still working on the footer layout. May use a grid...*/
@@ -159,3 +177,7 @@
     color: white;
 }
 
+@media (max-width: 800px) {
+    .flex-item-right, .flex-item-left
+      flex: 100%;
+}
