@@ -1,70 +1,80 @@
-.body{
+body,html{
     width: 100%;
     margin: 0;
-    background: #ccc;
+    padding: 0%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-}
-
-.header a {
-    background-color: transparent;
-    padding: 15px;
-    justify-content: left;
-}
-
-.mySkills {
 
 }
 
-.flex-container {
-  display: flex;
-  height: 800px;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  background-color: transparent;
-
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.flex-item {
-    flex: 50%;
-    width: 400px;
-    margin: 10px;
-    background-color: black;
+.logo {
+    margin-left: 0;
+    padding-bottom: 0;
+    align-content: flex-start;
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
 }
 
-.flexbox-item-1 {
-    min-height: 100px;
-    min-width: 200px;
+.navbar {
+    background: #3C1A5B;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
 }
 
-.flexbox-item-2 {
-    min-height: 100px;
-    min-width: 200px;
+.menu {
+    display: none;
+}
+.menu-line {
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 4px;
 }
 
-.flexbox-item-3 {
-    min-height: 100px;
-    min-width: 200px;
+@media all and (max-width: 480px) {
+
+    .nav_links {
+        flex-direction: column;
+    }
+    .menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    
 }
 
-.container {
+.container_navbar {
     width: 100%;
-    margin: 0 auto;
+    padding-top: 0%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
 }
 
 .inline-block li a {
     display:block;
-
 }
 
 .nav_links li {
-        list-style-type: none;
-        display: inline-block;
-        padding: 10px 10px;
-        font-family: Arial, Helvetica, sans-serif;
-        vertical-align: top;
-        justify-content: right;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+    justify-content: right;
 }
 
 .nav_links li a:hover {
@@ -77,15 +87,14 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase; 
-}
-
-.nav_links ul {
-    list-style-type: none;
-    background: transparent;
-    padding: 8px;
-    margin: 0;
+    text-transform: uppercase;
+    float: left;
+    color: #f2f2f2;
     text-align: right;
+    padding: 8px 8px;
+    text-decoration: none;
+    font-size: 16px;
+    align-items:flex-end;
 }
 
 .header {
@@ -95,39 +104,125 @@
     padding: 30px 10%;
 }
 
-.logo {
-    float: left;
-    padding: 8px 25px;  
-}
+/*-- Myskills flex box and containers are below--*/
 
-*{
-    background-color:rgb(160, 160, 160);
-}
-
-.logo {
-    margin-left: 8px;
-    padding-right: 20%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    align-items:flex-start;
+.mySkills {
+    margin-top: 5%;
+    margin-bottom: 0%;
+    padding: 0px;
+    text-align: center;
 }
 
 .flex-container {
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: DodgerBlue;
-  }
-  
-  .flex-container > div {
-    background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-  }
+  display: flex;
+  height: 800px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
 
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    background-color: #ffffff;
+    text-align: center;
+    text-size-adjust: bold;
+    line-height: 24px;
+    font-size: 16px;
+    
+}
+
+.flex-container h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: x-large;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.flex-container div {
+    border-color: transparent;
+}
+
+.flexbox-item-1 {
+    padding: 10%;
+    margin-right: 10px;
+}
+
+.flexbox-item-2 {
+    padding: 10%;
+    margin-right: 10px;
+}
+
+.flexbox-item-3 {
+    padding: 10%;
+    margin-right: 10px;
+}
+
+.flex-item {
+    flex: 50%;
+    width: 400px;
+    margin: 10px;
+    background-color: black;
+}
+
+/*-- variable widths for flex box and cards and content--*/
+
+.flexbox-item-1 {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    margin: var(--cardMargin);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    min-height: 100px;
+    min-width: 200px;
+}
+
+.flexbox-item-2 {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    margin: var(--cardMargin);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    min-height: 100px;
+    min-width: 200px;
+}
+
+.flexbox-item-3 {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    margin: var(--cardMargin);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    min-height: 100px;
+    min-width: 200px;
+}
+
+/*-- Start of My works section --*/
+
+.myWork {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px;
+    text-align: center;
+}
+
+/*-- My works section buttons--*/
 .click {
+    margin: 10%;
     padding: 8px;
     border: none;
     background: #ffffff;
@@ -136,9 +231,7 @@
     font-size: 16px;
     color: #7B38B8;
     transform: translate(-50%, -50%);
-}
-
-.click {border-radius: 4px;
+    border-radius: 4px;
 }
 
 .click:hover {
@@ -154,11 +247,21 @@
     transform: translate(-50%, -50%);
 }
 
+/*--View All Projects here--*/
+
+.viewall {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px;
+    text-align: center;
+}
+/*--footer section--*/
 .footer {
     padding: 40px 0;
     background-color: none;
     justify-content: space-around;
     padding-top: 10px;
+    text-decoration: none;
 }
 
 .footer_links {
@@ -170,14 +273,26 @@
     list-style-type: none;
 }
 
-/* still working on the footer layout. May use a grid...*/
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 8px;
+}
+
+.footer a:hover {
+    color: rgb(197, 161, 2);
+    transition: .3s;
+}
+
+/* still working on the footer layout. May use a grid to added favicons...*/
 .footer .social {
     text-align: center;
     padding-bottom: 25px;
     color: white;
 }
 
-@media (max-width: 800px) {
-    .flex-item-right, .flex-item-left
-      flex: 100%;
+.footer {
+    background-color: #3C1A5B;
 }
