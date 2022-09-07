@@ -116,36 +116,23 @@ div.container_navbar {
 }
 
 /*-- Myskills flex box and containers are below--*/
-
 .mySkills {
-    margin-top: 5%;
-    margin-bottom: 0%;
-    padding: 0px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
+H1.titleSkills {
+    text-align: center;
+    display: flex;
+    justify-content:center;
+
+}
 .flex-container {
   display: flex;
-  height: 800px;
-  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
-  background-color: transparent;
-
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-
-    background-color: #ffffff;
-    text-align: center;
-    text-size-adjust: bold;
-    line-height: 24px;
-    font-size: 16px;
-    
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .flex-container h3 {
@@ -157,23 +144,32 @@ div.container_navbar {
     padding-bottom: 25px;
 }
 
-.flex-container div {
-    border-color: transparent;
-}
-
 .flexbox-item-1 {
     padding: 10%;
     margin-right: 10px;
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    text-align: center;
 }
 
 .flexbox-item-2 {
     padding: 10%;
     margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    text-align: center;
+    
 }
 
 .flexbox-item-3 {
     padding: 10%;
     margin-right: 10px;
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    text-align: center;
 }
 
 .flex-item {
@@ -181,6 +177,8 @@ div.container_navbar {
     width: 400px;
     margin: 10px;
     background-color: black;
+    display: flex;
+    width: 33%;
 }
 
 /*-- variable widths for flex box and cards and content--*/
@@ -189,11 +187,11 @@ div.container_navbar {
     width: var(--cardWidth);
     height: var(--cardHeight);
     margin: var(--cardMargin);
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: none;
+    border-radius: 0px;
     background: #fff;
     box-sizing: border-box;
-    min-height: 100px;
+    min-height: 50vh;
     min-width: 200px;
 }
 
@@ -201,11 +199,11 @@ div.container_navbar {
     width: var(--cardWidth);
     height: var(--cardHeight);
     margin: var(--cardMargin);
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: none;
+    border-radius:0px;
     background: #fff;
     box-sizing: border-box;
-    min-height: 100px;
+    min-height: 50vh;
     min-width: 200px;
 }
 
@@ -213,11 +211,11 @@ div.container_navbar {
     width: var(--cardWidth);
     height: var(--cardHeight);
     margin: var(--cardMargin);
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: none;
+    border-radius: 0px;
     background: #fff;
     box-sizing: border-box;
-    min-height: 100px;
+    min-height: 50vh;
     min-width: 200px;
 }
 
@@ -282,9 +280,19 @@ div.container_navbar {
 
 .section {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: left;
     margin: auto;
+}
+
+.section img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: left;
+    margin: auto;
+
 }
 
 .click {
